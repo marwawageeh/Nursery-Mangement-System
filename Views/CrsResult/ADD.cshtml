@@ -1,0 +1,55 @@
+﻿@model CrsResult
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="container my-5">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center text-primary mb-4">Add New Trainee</h2>
+
+        <form asp-action="SaveADD" asp-controller="CrsResult" method="post" enctype="multipart/form-data">
+
+            <div class="mb-3">
+                <label asp-for="trainee_id" class="form-label">trainee</label>
+                <select asp-for="trainee_id" class="form-select" required>
+                    <option value="">-- Choose trainee --</option>
+                    @foreach (var item in ViewBag.trainee)
+                    {
+                        <option value="@item.ID">@item.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="trainee_id" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="crs_id" class="form-label">course</label>
+                <select asp-for="crs_id" class="form-select" required>
+                    <option value="">-- Choose course --</option>
+                    @foreach (var item in ViewBag.course)
+                    {
+                        <option value="@item.ID">@item.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="crs_id" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="Degree" class="form-label">Degree</label>
+                <input type="number" id="Degree" name="Degree" value="@Model?.Degree" class="form-control" required />
+                <span asp-validation-for="Degree" class="text-danger"></span>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success px-4">
+                    <i class="fas fa-save"></i> Create Trainee
+                </button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<script src="/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

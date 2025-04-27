@@ -1,0 +1,47 @@
+﻿@model List<CrsResult>
+
+@{
+    ViewData["Title"] = "Trainee Grades";
+}
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="container my-5">
+    <h2 class="text-center text-primary">Search for Trainee Grades</h2>
+
+    <!-- 🔍 فورم البحث -->
+    <form method="get" action="/Trainee/GetTraineeGrades" class="d-flex my-3">
+        <input type="number" name="traineeId" class="form-control me-2"
+               placeholder="Enter Trainee ID..." value="@ViewBag.TraineeId" required />
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <!-- 📊 جدول عرض الدرجات -->
+    @if (Model.Count > 0)
+    {
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Course Name</th>
+                    <th>Degree</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var grade in Model)
+                {
+                    <tr>
+                        <td>@grade.course.Name</td> <!-- اسم الكورس -->
+                        <td>@grade.Degree</td> <!-- الدرجة -->
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else if (ViewBag.TraineeId != null)
+    {
+        <p class="text-danger">No records found for this Trainee ID.</p>
+    }
+</div>

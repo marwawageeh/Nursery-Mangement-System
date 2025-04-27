@@ -1,0 +1,72 @@
+﻿@model Attendance
+
+<br /><br /><br /><br />
+
+<div class="container my-5">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center text-primary mb-4">Add Attendance</h2>
+
+        <form method="post" action="/attendance/SaveADD">
+            <div class="mb-3">
+                <label for="Date" class="form-label">Date</label>
+                <input type="date" id="Date" name="Date" value="@Model?.Date.ToString("yyyy-MM-dd")" class="form-control" required />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+    <label for="Status" class="form-label">Status</label>
+    <select id="Status" name="Status" class="form-select" required>
+        <option value="">-- Select Status --</option>
+        @{
+            var isPresentSelected = Model?.Status == "Present" ? "selected" : "";
+            var isAbsentSelected = Model?.Status == "Absent" ? "selected" : "";
+        }
+        <option value="Present" >Present</option>
+        <option value="Absent" >Absent</option>
+    </select>
+    <span asp-validation-for="Status" class="text-danger"></span>
+</div>
+
+
+            <div class="mb-3">
+                <label for="Time" class="form-label">Time</label>
+                <input type="time" id="Time" name="Time" value="@Model?.Time" class="form-control" required />
+                <span asp-validation-for="Time" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="TraineeID" class="form-label">Student</label>
+                <select asp-for="TraineeID" class="form-select" required>
+                    <option value="">-- Choose Student --</option>
+                    @foreach (var item in ViewBag.trainee)
+                    {
+                        <option value="@item.ID" >@item.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="TraineeID" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="CourseId" class="form-label">Course</label>
+                <select asp-for="CourseId" class="form-select" required>
+                    <option value="">-- Choose Course --</option>
+                    @foreach (var item in ViewBag.course)
+                    {
+                        <option value="@item.ID" >@item.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="CourseId" class="text-danger"></span>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-success px-4">
+                    <i class="fas fa-save"></i> Save Attendance
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

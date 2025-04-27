@@ -1,0 +1,67 @@
+﻿@model Payment
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2 class="text-center">💳 دفع المصروفات</h2>
+
+
+<div class="container my-5">
+    <div class="card shadow-lg p-4">
+<form method="post" asp-action="create">
+    <div asp-validation-summary="All" class="text-danger mb-4"></div>
+
+    <div class="mb-3">
+        <label asp-for="TraineeId" class="form-label">الطالب</label>
+        <select asp-for="TraineeId" class="form-select" required>
+            <option value="">-- اختر الطالب --</option>
+            @foreach (var item in ViewBag.trainee)
+            {
+                <option value="@item.ID">@item.Name</option>
+            }
+        </select>
+        <span asp-validation-for="TraineeId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Month" class="form-label">الشهر المدفوع</label>
+        <input asp-for="Month" class="form-control" required />
+        <span asp-validation-for="Month" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="PaymentMethod" class="form-label">طريقة الدفع</label>
+        <select asp-for="PaymentMethod" class="form-select" required>
+            <option value="">اختر طريقة الدفع</option>
+            <option>Visa</option>
+            <option>Cash</option>
+            <option>Vodafone Cash</option>
+        </select>
+        <span asp-validation-for="PaymentMethod" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Amount" class="form-label">المبلغ</label>
+        <input asp-for="Amount" class="form-control" required />
+        <span asp-validation-for="Amount" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-3">
+        <i class="fas fa-save"></i> 💸 دفع
+    </button>
+</form>
+
+
+    </div>
+</div>
+<br />
+<br />
+<br />
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success mt-3">
+        @TempData["SuccessMessage"]
+    </div>
+}

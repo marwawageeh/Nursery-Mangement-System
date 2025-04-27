@@ -1,0 +1,70 @@
+﻿@model mvc_project.ModelView.LoginUserViewModel
+
+<br />
+<br />
+<br />
+<br /> 
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg p-4">
+                <h2 class="text-center text-primary">Login</h2>
+                <hr />
+
+                <form asp-action="SaveLogin">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+
+                    <!-- Username Field -->
+                    <div class="form-group mb-3">
+                        <label asp-for="Name" class="form-label"></label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            <input asp-for="Name" class="form-control" placeholder="Enter your username" />
+                        </div>
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group mb-3">
+                        <label asp-for="Password" class="form-label"></label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                            <input asp-for="Password" type="password" class="form-control" placeholder="Enter your password" />
+                        </div>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <!-- Remember Me -->
+                    <div class="form-group form-check mb-3">
+                        <input class="form-check-input" asp-for="RememberMe" id="rememberMeCheck" />
+                        <label class="form-check-label" for="rememberMeCheck">
+                            Remember Me
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </button>
+                    </div>
+                </form>
+
+                <div class="text-center mt-3">
+                    <a asp-action="register" class="text-decoration-none">Create New Account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

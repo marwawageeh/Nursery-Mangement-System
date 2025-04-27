@@ -1,0 +1,71 @@
+﻿@model Instructor
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="container my-5">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center text-primary mb-4">Edit Instructor</h2>
+
+        <form method="post" asp-action="Edit" asp-controller="Instructor">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">Instructor Name</label>
+                <input asp-for="Name" class="form-control" placeholder="Enter instructor name" required />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ImageURL" class="form-label">Image URL</label>
+                <input asp-for="ImageURL" class="form-control" placeholder="Enter image URL" />
+                <span asp-validation-for="ImageURL" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Salary" class="form-label">Salary</label>
+                <input asp-for="Salary" type="number" class="form-control" placeholder="Enter salary" required />
+                <span asp-validation-for="Salary" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Address" class="form-label">Address</label>
+                <input asp-for="Address" class="form-control" placeholder="Enter address" required />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+
+            @* إذا كنت بحاجة إلى اختيار القسم والدورة، قم بإزالة التعليق *@
+            @*
+            <div class="mb-3">
+            <label for="crs_id" class="form-label">Course</label>
+            <select id="crs_id" name="crs_id" class="form-select">
+            @foreach (var item in Model.CoursesList)
+            {
+            <option value="@item.ID" selected="@(Model.crs_id == item.ID)">@item.Name</option>
+            }
+            </select>
+            </div>
+
+            <div class="mb-3">
+            <label for="dept_id" class="form-label">Department</label>
+            <select id="dept_id" name="dept_id" class="form-select">
+            @foreach (var item in Model.Departmentlist)
+            {
+            <option value="@item.ID" selected="@(Model.dept_id == item.ID)">@item.Name</option>
+            }
+            </select>
+            </div>
+            *@
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-success px-4">
+                    <i class="fas fa-save"></i> Save Changes
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

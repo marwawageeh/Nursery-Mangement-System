@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Nursery_project</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    @* <link href="css/styles.css" rel="stylesheet" /> *@
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="css/index1.css" rel="stylesheet" />
+
+</head>
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg text-uppercase fixed-top shadow-lg py-3" id="mainNav" style="background-color: #8B7355;">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#page-top">
+                <img src="images/R.png" alt=".." style="height: 40px; width: auto; margin-right: 10px;">
+                <span class="fw-bold text-white fs-3">Sanabel Alkhair</span>
+            </a>
+
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-dark text-white rounded" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-white @(ViewContext.RouteData.Values["controller"].ToString().ToLower() == "home" && ViewContext.RouteData.Values["action"].ToString().ToLower() == "index" ? "active text-decoration-underline" : "")"
+                           asp-action="Index" asp-controller="Home">Home</a>
+                    </li>
+
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold text-white @(ViewContext.RouteData.Values["controller"].ToString().ToLower() == "trainee" && ViewContext.RouteData.Values["action"].ToString().ToLower() == "searchtrainee" ? "active text-decoration-underline" : "")"
+                               asp-action="SearchTrainee" asp-controller="Trainee">Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold text-white @(ViewContext.RouteData.Values["controller"].ToString().ToLower() == "home" && ViewContext.RouteData.Values["action"].ToString().ToLower() == "complaints" ? "active text-decoration-underline" : "")"
+                               asp-action="Complaints" asp-controller="Home">Complaints</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold text-white @(ViewContext.RouteData.Values["controller"].ToString().ToLower() == "Payment" && ViewContext.RouteData.Values["action"].ToString().ToLower() == "Create" ? "active text-decoration-underline" : "")"
+                               asp-action="Create" asp-controller="Payment">payment</a>
+                        </li>
+                        @if (User.IsInRole("admin"))
+                        {
+                           @*  <li class="nav-item">
+                                <a class="nav-link fw-bold text-white @(ViewContext.RouteData.Values["controller"].ToString().ToLower() == "department" ? "active text-decoration-underline" : "")"
+                                   asp-action="index" asp-controller="department">Department</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold text-white @(ViewContext.RouteData.Values["controller"].ToString().ToLower() == "instructor" ? "active text-decoration-underline" : "")"
+                                   asp-action="index" asp-controller="instructor">Instructor</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold text-white @(ViewContext.RouteData.Values["controller"].ToString().ToLower() == "course" ? "active text-decoration-underline" : "")"
+                                   asp-action="index" asp-controller="course">Course</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold text-white @(ViewContext.RouteData.Values["controller"].ToString().ToLower() == "trainee" && ViewContext.RouteData.Values["action"].ToString().ToLower() == "index" ? "active text-decoration-underline" : "")"
+                                   asp-action="Index" asp-controller="Trainee">Trainee</a>
+                            </li>
+                           @*  <li class="nav-item">
+                                <a class="nav-link fw-bold text-white @(ViewContext.RouteData.Values["controller"].ToString().ToLower() == "CrsResult" && ViewContext.RouteData.Values["action"].ToString().ToLower() == "index" ? "active text-decoration-underline" : "")"
+                                   asp-action="Index" asp-controller="CrsResult">CrsResult</a>
+                            </li> *@
+                            @* <li class="nav-item">
+                                <a class="nav-link fw-bold text-white @(ViewContext.RouteData.Values["controller"].ToString().ToLower() == "role" ? "active text-decoration-underline" : "")"
+                                   asp-action="AddRole" asp-controller="Role">Role</a>
+                            </li> *@ 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white fw-bold" href="#" id="adminDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Management
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item @(ViewContext.RouteData.Values["controller"].ToString().ToLower() == "department" ? "active" : "")"
+                                   asp-action="index" asp-controller="department">Department</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item @(ViewContext.RouteData.Values["controller"].ToString().ToLower() == "instructor" ? "active" : "")"
+                                   asp-action="index" asp-controller="instructor">Teacher</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item @(ViewContext.RouteData.Values["controller"].ToString().ToLower() == "course" ? "active" : "")"
+                                   asp-action="index" asp-controller="course">Course</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item @(ViewContext.RouteData.Values["controller"].ToString().ToLower() == "trainee" && ViewContext.RouteData.Values["action"].ToString().ToLower() == "index" ? "active" : "")"
+                                   asp-action="Index" asp-controller="Trainee">Student</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item @(ViewContext.RouteData.Values["controller"].ToString().ToLower() == "role" ? "active" : "")"
+                                   asp-action="AddRole" asp-controller="Role">Role</a>
+                            </li>
+                                    <li>
+                                        <a class="dropdown-item @(ViewContext.RouteData.Values["controller"].ToString().ToLower() == "Payment" ? "active" : "")"
+                                           asp-action="index" asp-controller="Payment">payment</a>
+                                    </li>
+
+                        </ul>
+                    </li>
+
+                        }
+
+                        <!-- User Dropdown (Logout) -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white fw-bold" href="#" id="userDropdown" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user"></i> 
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" asp-controller="Account" asp-action="SignOut">Logout</a></li>
+                            </ul>
+                        </li>
+                    }
+                    else
+                    {
+                        <!-- User Dropdown (Login & Register) -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white fw-bold" href="#" id="authDropdown" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user"></i> 
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" asp-controller="Account" asp-action="Login">Login</a></li>
+                                <li><a class="dropdown-item" asp-controller="Account" asp-action="Register">Register</a></li>
+                            </ul>
+                        </li>
+                    }
+                </ul>
+
+                <!-- Search Box -->
+                <!-- Search Box -->
+                <form class="d-flex align-items-center position-relative ms-3" role="search" id="searchForm">
+                    <button id="searchToggle" class="btn btn-light fw-bold" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <input id="searchQuery" class="form-control ms-2 border-dark fw-bold" type="search" placeholder="Search..." aria-label="Search"
+                           style="width: 0; opacity: 0; transition: width 0.3s ease, opacity 0.3s ease;">
+                </form>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // دالة البحث
+        function performSearch() {
+            var query = document.getElementById("searchQuery").value.toLowerCase();
+            var rows = document.querySelectorAll("tbody tr");
+
+            rows.forEach(function (row) {
+                var cells = row.getElementsByTagName("td");
+                var found = false;
+
+                for (var i = 0; i < cells.length; i++) {
+                    if (cells[i].textContent.toLowerCase().includes(query)) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                row.style.display = found ? "" : "none";
+            });
+        }
+
+        // دالة الفتح والإغلاق + حدث الكتابة
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleBtn = document.getElementById("searchToggle");
+            const searchInput = document.getElementById("searchQuery");
+
+            toggleBtn.addEventListener("click", function () {
+                if (searchInput.style.width === "200px") {
+                    // اقفلها
+                    searchInput.style.width = "0";
+                    searchInput.style.opacity = "0";
+                    searchInput.blur();
+                } else {
+                    // افتحها
+                    searchInput.style.width = "200px";
+                    searchInput.style.opacity = "1";
+                    searchInput.focus();
+                }
+            });
+
+            // شغّل البحث لما المستخدم يكتب
+            searchInput.addEventListener("keyup", function () {
+                performSearch();
+            });
+        });
+    </script>
+
+
+
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+
+
+
+    <footer class="text-white text-center py-2 fixed-bottom" style="background-color: #8B7355;">
+
+        <p class="mb-0 d-flex justify-content-center align-items-center gap-3 flex-wrap">
+            &copy; 2025 Marwa_wageeh's App.
+            <!-- Social Icons -->
+            <a href="https://www.facebook.com/fawzia.faraag.9" target="_blank" class="text-white mx-1">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/marwa-wageeh-6885ab309/" target="_blank" class="text-white mx-1">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/marwawageeh?tab=repositories" target="_blank" class="text-white mx-1">
+                <i class="fab fa-github"></i>
+            </a>
+        </p>
+        
+
+            <a class="nav-link fw-bold text-white @(ViewContext.RouteData.Values["controller"].ToString().ToLower() == "home" @* && ViewContext.RouteData.Values["action"].ToString().ToLower() == "about_us" ? "active text-decoration-underline" : "" *@)"
+               asp-action="About_US" asp-controller="Home">About_US</a>
+
+
+        
+    </footer>
+
+
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    @RenderSection("Scripts", required: false)
+
+
+</body>
+</html>
