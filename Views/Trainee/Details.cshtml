@@ -1,0 +1,87 @@
+﻿@model Trainee
+
+<br />
+<br />
+
+<div class="container my-5">
+    <div class="card shadow-lg p-4">
+        <div class="card-header text-white text-center" style="background-color: #5D4037;">
+            <h3 class="mb-0">Trainee Details</h3>
+        </div>
+        <div class="card-body text-center">
+            <img src="@Model.ImageURL" alt="Trainee Image" class="img-thumbnail" style="width:100px; height:100px;">
+            <table class="table table-bordered mt-4">
+                <tbody>
+                    <tr>
+                        <th style="color: #4E342E; width: 30%;">Name</th>
+                        <td>@Model.Name</td>
+                    </tr>
+                    <tr>
+                        <th style="color: #4E342E;">Address</th>
+                        <td>@Model.Address</td>
+                    </tr>
+                    <tr>
+                        <th style="color: #4E342E;">Grade</th>
+                        <td>@Model.Grade</td>
+                    </tr>
+                    <tr>
+                        <th style="color: #4E342E;">Department</th>
+                        <td>@Model.department.Name</td>
+
+                    </tr>
+                    <tr>
+                        <th style="color: #4E342E;">Courses & Grades</th>
+                        <td>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Course Name</th>
+                                        <th>Grade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var result in Model.crsResults)
+                                    {
+                                        <tr>
+                                            <td>@(result.course != null ? result.course.Name : "No Course Assigned")</td>
+
+                                            <td>@result.Degree</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+    <th style="color: #4E342E;">Payment History</th>
+    <td>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Amount Paid</th>
+                    <th>Payment Method</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var payment in Model.Payments)   {
+                    <tr>
+                        <td>@payment.Month</td>
+                        <td>@payment.Amount</td>
+                        <td>@payment.PaymentMethod</td>
+                        <td>@(payment.IsPaid ? "Paid" : "Not Paid")</td> <!-- Assuming 'IsPaid' indicates the payment status -->
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </td>
+</tr>
+
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

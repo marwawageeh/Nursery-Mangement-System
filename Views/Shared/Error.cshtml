@@ -1,0 +1,35 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="container my-5">
+    <div class="card shadow-lg p-4">
+        <h1 class="text-danger text-center">Error</h1>
+        <h2 class="text-danger text-center">An error occurred while processing your request.</h2>
+
+        @if (Model?.ShowRequestId == true)
+        {
+            <p class="text-center mt-3">
+                <strong>Request ID:</strong> <code>@Model.RequestId</code>
+            </p>
+        }
+
+        <div class="alert alert-warning mt-4">
+            <h3>Development Mode</h3>
+            <p>
+                Switching to <strong>Development</strong> mode will display more detailed information about the error.
+            </p>
+            <p>
+                <strong>Do not enable Development mode in a live application.</strong>
+                It may expose sensitive data from exceptions.
+                To enable Development mode locally, set the environment variable <code>ASPNETCORE_ENVIRONMENT</code> to <strong>Development</strong> and restart the app.
+            </p>
+        </div>
+    </div>
+</div>

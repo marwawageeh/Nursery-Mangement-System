@@ -1,0 +1,44 @@
+﻿@model Instructor
+
+<br />
+<br />
+
+<div class="container my-5">
+    <div class="card shadow-lg p-4">
+        <div class="card-header text-white text-center" style="background-color: #5D4037;">
+            <h3 class="mb-0">Instructor Details</h3>
+        </div>
+        <div class="card-body text-center">
+            <img src="@Model.ImageURL" alt="Instructor Image" class="img-thumbnail" style="width:100px; height:100px;">
+            <table class="table table-bordered mt-4">
+                <tbody>
+                    <tr>
+                        <th style="color: #4E342E; width: 30%;">Name</th>
+                        <td>@Model.Name</td>
+                    </tr>
+                    <tr>
+                        <th style="color: #4E342E;">Address</th>
+                        <td>@Model.Address</td>
+                    </tr>
+                    <tr>
+                        <th style="color: #4E342E;">Salary</th>
+                        <td>@Model.Salary</td>
+                    </tr>
+                    <tr>
+                        <th style="color: #4E342E;">Department</th>
+                        <td>@Model.department.Name</td>
+                    </tr>
+                    <tr>
+                        <th style="color: #4E342E;">Course</th>
+                        <td>@Model.course.Name</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer text-center">
+            <a asp-action="Index" asp-controller="Instructor" class="btn text-white px-4" style="background-color: #6D4C41;">
+                <i class="fas fa-arrow-left"></i> Back to Instructors
+            </a>
+        </div>
+    </div>
+</div>

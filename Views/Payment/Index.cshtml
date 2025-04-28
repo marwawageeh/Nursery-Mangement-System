@@ -1,0 +1,53 @@
+﻿@model List<mvc_project.Models.Payment>
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary">Payment List</h2>
+        <div>
+            <a asp-action="create" asp-controller="Payment" class="btn btn-success me-2">
+                <i class="fas fa-plus"></i> Create
+            </a>
+            <a asp-action="PaymentStatistics" asp-controller="Payment" class="btn btn-primary px-4">
+                <i class="fas fa-chart-bar"></i> Payment Statistics
+            </a>
+
+            <a asp-action="ExportToCsv" asp-controller="Payment" class="btn btn-danger">
+                <i class="fas fa-file-export"></i> Export
+            </a>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Paid Month</th>
+                    <th>Amount</th>
+                    <th>Payment Date</th>
+                    <th>Paid?</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var payment in Model)
+                {
+                    <tr>
+                        <td>@payment.TraineeId</td>
+                        <td>@payment.Trainee?.Name</td>
+                        <td>@payment.Month</td>
+                        <td>@payment.Amount.ToString("F2")</td>
+                        <td>@payment.PaymentDate.ToShortDateString()</td>
+                        <td>@(payment.IsPaid ? "✅ Yes" : "❌ No")</td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

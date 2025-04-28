@@ -1,0 +1,47 @@
+﻿@model Course
+
+<br />
+<br />
+
+<div class="container my-5">
+    <div class="card shadow-lg p-4">
+        <div class="card-header" style="background-color: #5D4037; color: white; text-align: center;">
+            <h3 class="mb-0">Course Details</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered table-striped">
+                <tbody>
+                    <tr>
+                        <th class="w-25" style="color: #4E342E;">Course ID</th>
+                        <td>@Model.ID</td>
+                    </tr>
+                    <tr>
+                        <th style="color: #4E342E;">Course Name</th>
+                        <td>@Model.Name</td>
+                    </tr>
+                    <tr>
+                        <th style="color: #4E342E;">Degree</th>
+                        <td>@Model.Degree</td>
+                    </tr>
+                    <tr>
+                        <th style="color: #4E342E;">Minimum Degree</th>
+                        <td>@Model.Min_Degree</td>
+                    </tr>
+                    <tr>
+                        <th style="color: #4E342E;">Department</th>
+                        <td>@Model.department.Name</td>
+                    </tr>
+                    <tr>
+                        <th style="color: #4E342E;">Hours</th>
+                        <td>@Model.Houres</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer text-center">
+            <a asp-action="Index" asp-controller="Course" class="btn text-white px-4" style="background-color: #6D4C41;">
+                <i class="fas fa-arrow-left"></i> Back to Courses
+            </a>
+        </div>
+    </div>
+</div>

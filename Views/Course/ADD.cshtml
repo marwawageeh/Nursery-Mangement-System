@@ -1,0 +1,60 @@
+﻿@model Course
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="container my-5">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center text-primary mb-4">Add New Course</h2>
+
+        <form method="post" action="/course/SaveADD">
+            <div class="mb-3">
+                <label for="Name" class="form-label">Course Name</label>
+                <input type="text" id="Name" name="Name" value="@Model?.Name" class="form-control" placeholder="Enter course name" required />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="Degree" class="form-label">Degree</label>
+                <input type="number" id="Degree" name="Degree" value="@Model?.Degree" class="form-control" placeholder="Enter degree" required />
+                <span asp-validation-for="Degree" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="Min_Degree" class="form-label">Minimum Degree</label>
+                <input type="number" id="Min_Degree" name="Min_Degree" value="@Model?.Min_Degree" class="form-control" placeholder="Enter minimum degree" required />
+                <span asp-validation-for="Min_Degree" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="Houres" class="form-label">Hours</label>
+                <input type="number" id="Houres" name="Houres" value="@Model?.Houres" class="form-control" placeholder="Enter hours" required />
+                <span asp-validation-for="Houres" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="dept_id" class="form-label">Department</label>
+                <select asp-for="dept_id" class="form-select" required>
+                    <option value="">-- Choose department --</option>
+                    @foreach (var item in ViewBag.department)
+                    {
+                        <option value="@item.ID">@item.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="dept_id" class="text-danger"></span>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-success px-4">
+                    <i class="fas fa-save"></i> Create Course
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

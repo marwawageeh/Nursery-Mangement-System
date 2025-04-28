@@ -1,0 +1,49 @@
+﻿@model IEnumerable<mvc_project.Models.Payment>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="container">
+    <h2 class="text-center text-primary mb-4">Payment History</h2>
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>Paid Month</th>
+                    <th>Payment Method</th>
+                    <th>Amount</th>
+                    <th>Payment Date</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var payment in Model)
+                {
+                    <tr>
+                        <td>@payment.Month</td>
+                        <td>@payment.PaymentMethod</td>
+                        <td>@payment.Amount.ToString("F2")</td> <!-- Display the amount with decimal formatting -->
+                        <td>@payment.PaymentDate.ToString("yyyy-MM-dd")</td>
+                        <td>
+                            <a asp-action="DownloadReceipt" asp-route-paymentId="@payment.Id" class="btn btn-outline-success btn-sm">
+                                Download Receipt <i class="fas fa-download"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

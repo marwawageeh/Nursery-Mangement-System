@@ -1,0 +1,63 @@
+﻿@model Inst_With_Cource_MV
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="container my-5">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center text-primary mb-4">Add New Instructor</h2>
+
+        <form method="post" action="/instructor/saveadd" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="Name" class="form-label">Instructor Name</label>
+                <input type="text" id="Name" name="Name" value="@Model?.Name" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="Salary" class="form-label">Salary</label>
+                <input type="number" id="Salary" name="Salary" value="@Model?.Salary" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="ImageFile" class="form-label">Upload Image</label>
+                <input type="file" id="ImageFile" name="ImageFile" class="form-control" accept="image/*" />
+            </div>
+
+            <div class="mb-3">
+                <label for="Address" class="form-label">Address</label>
+                <input type="text" id="Address" name="Address" value="@Model?.Address" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="crs_id" class="form-label">Course</label>
+                <select id="crs_id" name="crs_id" class="form-select" required>
+                    <option value="">-- Choose a course --</option>
+                    @foreach (var item in Model.CoursesList)
+                    {
+                        <option value="@item.ID" selected="@(Model.crs_id == item.ID)"> @item.Name </option>
+                    }
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="dept_id" class="form-label">Department</label>
+                <select id="dept_id" name="dept_id" class="form-select" required>
+                    <option value="">-- Choose a department --</option>
+                    @foreach (var item in Model.Departmentlist)
+                    {
+                        <option value="@item.ID" selected="@(Model.dept_id == item.ID)"> @item.Name </option>
+                    }
+                </select>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-success px-4">
+                    <i class="fas fa-save"></i> Create Instructor
+                </button>
+            </div>
+        </form>
+
+    </div>
+</div>

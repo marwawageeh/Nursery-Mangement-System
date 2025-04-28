@@ -1,0 +1,199 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = mvc_project
+build_property.RootNamespace = mvc_project
+build_property.ProjectDir = D:\Coure .Net ITI\MVC ITI\mvc_project\mvc_project\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = D:\Coure .Net ITI\MVC ITI\mvc_project\mvc_project
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Attendance/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Attendance/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Course/ADD.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEFERC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Course/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Course/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Course/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/CrsResult/ADD.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JzUmVzdWx0XEFERC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/CrsResult/GetTraineeGrades.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JzUmVzdWx0XEdldFRyYWluZWVHcmFkZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/CrsResult/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JzUmVzdWx0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Department/ADD.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxBREQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Department/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Department/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Department/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Home/About_US.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dF9VUy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Home/Complaints.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wbGFpbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Home/SendComplaint.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZW5kQ29tcGxhaW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Instructor/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1Y3RvclxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Instructor/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1Y3RvclxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Instructor/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1Y3RvclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Instructor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1Y3RvclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Payment/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Payment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Payment/PaymentHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxQYXltZW50SGlzdG9yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Payment/PaymentStatistics.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxQYXltZW50U3RhdGlzdGljcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Product/GetAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxHZXRBbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Product/getbyis.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxnZXRieWlzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Role/AddRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxBZGRSb2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Shared/_MWLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NV0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Trainee/ADD.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5lZVxBREQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Trainee/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5lZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Trainee/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5lZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Trainee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5lZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Trainee/SearchTrainee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5lZVxTZWFyY2hUcmFpbmVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coure .Net ITI/MVC ITI/mvc_project/mvc_project/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-w63thlcg9u
