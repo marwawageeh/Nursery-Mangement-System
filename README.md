@@ -34,7 +34,7 @@ The system supports full CRUD operations for each module and mimics real-world w
 
 Full project documentation, including system analysis, ERD, and use case diagrams, is available here:
 
-📎 **[Google Drive – Documentation Folder](https://drive.google.com/your-link-here)](https://drive.google.com/drive/folders/1db4fYyUeeUnhAQgLkyRcbGAO-UcLfFgg?usp=sharing)**  
+📎 **(https://drive.google.com/your-link-here)](https://drive.google.com/drive/folders/1db4fYyUeeUnhAQgLkyRcbGAO-UcLfFgg?usp=sharing)**  
 *(Replace this with your actual Google Drive link)*
 
 
